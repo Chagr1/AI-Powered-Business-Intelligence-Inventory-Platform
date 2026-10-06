@@ -8,6 +8,7 @@ from app.api import auth
 from app.api import products
 from app.api import orders
 from app.api import analytics
+from app.api import assistant
 
 app = FastAPI(title="AI-Powered Business Intelligence API")
 
@@ -18,6 +19,7 @@ app.include_router(auth.router)
 app.include_router(products.router)
 app.include_router(orders.router)
 app.include_router(analytics.router)
+app.include_router(assistant.router)
 
 @app.get("/")
 def root():
